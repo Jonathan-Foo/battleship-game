@@ -1,0 +1,24 @@
+{
+  "name": "battleship-game",
+  "version": "1.0.0",
+  "description": "A battleship browser game built to explore and learn Test Driven Development using Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan-Foo/battleship-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan-Foo/battleship-game/issues"
+  },
+  "homepage": "https://github.com/Jonathan-Foo/battleship-game#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1"
+  }
+}
