@@ -1,0 +1,53 @@
+@import 'theme';
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shipContainer($alignItems, $direction, $amount) {
+    .ships-container {
+        position: absolute;
+        #{$direction}: $amount;
+        bottom: 46px;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        align-items: $alignItems;
+        .ship-wrapper {
+            display: flex;
+            gap: .5em;
+        
+            .ship-part{
+                background: var(--secondary-color);
+                width: 10px;
+                height: 10px;
+                
+            }
+
+            .ship-part.sunk{
+                background: var(--ship-sunk-color);
+            }
+        
+        }
+    
+    }    
+}
+
+@mixin letterIndex($direction, $amount) {
+@for $i from 1 through 10 {
+    .row-#{$i} {
+        position: relative;
+        
+        &::before {
+          content: '#{$i}';
+          color: #000;
+          position: absolute;
+          #{$direction}: $amount;
+          top: 10px;
+          font-size: 12px;
+        }
+    }
+}
+}

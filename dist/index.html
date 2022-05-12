@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship</title>
+    <link rel="stylesheet" href="scss/style.css" />
+    <script src="../src/components/Gameboard.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/39eb0e3e41.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="top">
+      <div class="instruction">
+        <p>Player's Turn</p>
+      </div>
+      <button type="button" class="start-btn">Start Game</button>
+    </div>
+
+    <div class="main">
+      <!-- PLAYER'S BOARD -->
+      <div class="board-container player-board">
+        <div class="game-elements">
+          <div class="ships-container">
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+          </div>
+          <table class="gameboard-wrapper">
+            <tbody class="gameboard">
+              <tr class="board row-1">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-2">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-3">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-4">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-5">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-6">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-7">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-8">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-9">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-10">
+                <td class="board-element column-1"><div></div></td>
+                <td class="board-element column-2"><div></div></td>
+                <td class="board-element column-3"><div></div></td>
+                <td class="board-element column-4"><div></div></td>
+                <td class="board-element column-5"><div></div></td>
+                <td class="board-element column-6"><div></div></td>
+                <td class="board-element column-7"><div></div></td>
+                <td class="board-element column-8"><div></div></td>
+                <td class="board-element column-9"><div></div></td>
+                <td class="board-element column-10"><div></div></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="owner">Player's Board</p>
+        </div>
+      </div>
+
+      <!-- COMPUTER'S BOARD -->
+      <div class="board-container computer-board">
+        <div class="game-elements">
+          <table class="gameboard-wrapper">
+            <tbody class="gameboard">
+              <tr class="board row-1">
+                <td class="board-element"><div class="miss"></div></td>
+                <td class="board-element"><div class="hit"></div></td>
+                <td class="board-element"><div class="occupied"></div></td>
+                <td class="board-element"><div class="changing"></div></td>
+                <td class="board-element"><div class="changing head"></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-2">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-3">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-4">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-5">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-6">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-7">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-8">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-9">
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+                <td class="board-element"><div></div></td>
+              </tr>
+              <tr class="board row-10">
+                <td class="board-element column-1"><div></div></td>
+                <td class="board-element column-2"><div></div></td>
+                <td class="board-element column-3"><div></div></td>
+                <td class="board-element column-4"><div></div></td>
+                <td class="board-element column-5"><div></div></td>
+                <td class="board-element column-6"><div></div></td>
+                <td class="board-element column-7"><div></div></td>
+                <td class="board-element column-8"><div></div></td>
+                <td class="board-element column-9"><div></div></td>
+                <td class="board-element column-10"><div></div></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="owner">Computer's Board</p>
+          <div class="ships-container">
+            <div class="ship-wrapper">
+              <div class="ship-part sunk"></div>
+              <div class="ship-part sunk"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

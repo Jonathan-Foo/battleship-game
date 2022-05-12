@@ -1,0 +1,154 @@
+@import 'mixins';
+@import 'theme';
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding-inline: 18em;
+    
+    .board-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 3em;
+
+        .game-elements {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5em;
+            
+           p {
+               color: hsl(0, 0%, 10%);
+           }
+
+            
+        }
+    }
+}
+
+
+
+// creating letters under columns
+$letters: (1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I', 10: 'J'); 
+
+@each $key, $letter in $letters {
+    .column-#{$key} {
+        position: relative;
+        
+        &::before {
+          content: $letter;
+          color: #000;
+          position: absolute;
+          bottom: -19px;
+          left: 14px;
+          font-size: 12px;
+        }
+    }
+}
+
+
+.board-element{
+    border: 1px solid var(--main-border-color);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    &:hover{
+        border: 1px solid var(--main-color);
+    }
+
+    div {
+        width: 100%;
+        height: 100%;
+        position: relative
+    }
+    
+    div.miss {
+        background: var(--main-color);
+        &::before{
+            content: '•';
+            color: hsl(0, 0%, 20%);
+            position: absolute;
+            left: 13px;
+            top: 5px;
+
+        }
+    }
+
+    div.hit {
+        background: var(--miss-color);
+        &::before{
+            content: '🞮';
+        
+            color: hsl(0, 0%, 20%);
+            position: absolute;
+            left: 11px;
+            top: 6px;
+
+        }
+    }
+
+    div.occupied {
+        background: var(--secondary-color);
+    }
+
+    div.changing {
+        background: var(--changePos-color);
+    }
+    
+    div.changing.head {
+        background: var(--changePos-color);
+        
+        
+        &::before{
+            content: "⟲";
+            color: hsl(0, 0%, 15%);
+            position: absolute;
+            top: 7px;
+            left: 9px;
+            
+        }
+    }
+
+
+
+
+}
+
+
+.board-container{
+    position: relative;
+}
+
+
+.player-board {
+    position: relative;
+    @include shipContainer(flex-end, left, -125px);
+    @include letterIndex(left, -20px);
+}
+
+.computer-board {
+    position: relative;
+    @include shipContainer(flex-start, right, -125px);
+    @include letterIndex(right, -20px);
+}
+
+@media (max-width: 500px) {
+
+
+    .main{
+        padding-inline: 0;
+    }
+
+    .ships-container *{
+        display: none;
+        // border: 1px solid red;
+      
+    }
+}
