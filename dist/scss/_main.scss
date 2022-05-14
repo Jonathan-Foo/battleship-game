@@ -26,6 +26,10 @@
            p {
                color: hsl(0, 0%, 10%);
            }
+           
+           table {
+                position: relative;
+           }
 
             
         }
@@ -116,6 +120,10 @@ $letters: (1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I
         }
     }
 
+    div.eligible {
+        background: var(--eligible-color); 
+    }
+
 
 
 
@@ -150,5 +158,20 @@ $letters: (1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I
         display: none;
         // border: 1px solid red;
       
+    }
+}
+
+
+table.disabled {
+    pointer-events: none;
+    
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba($color: rgb(241, 241, 241), $alpha: 0.5);
+        width: 105%;
+        height: 105%;
+        z-index: 2;
     }
 }

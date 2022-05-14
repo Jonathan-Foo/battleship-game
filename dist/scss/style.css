@@ -15,6 +15,8 @@ body {
   --miss-color: #f18585;
   --secondary-color: #9dc999;
   --changePos-color: #c99999;
+  --eligible-color: #ebe487;
+  --disable-color: hsl(0, 0%, 95%);
   --main-border-color: hsl(0, 0%, 40%);
   --ship-sunk-color: hsl(0, 0%, 60%);
 }
@@ -24,6 +26,8 @@ body {
   --miss-color: #f18585;
   --secondary-color: #9dc999;
   --changePos-color: #c99999;
+  --eligible-color: #ebe487;
+  --disable-color: hsl(0, 0%, 95%);
   --main-border-color: hsl(0, 0%, 40%);
   --ship-sunk-color: hsl(0, 0%, 60%);
 }
@@ -70,6 +74,8 @@ body {
   --miss-color: #f18585;
   --secondary-color: #9dc999;
   --changePos-color: #c99999;
+  --eligible-color: #ebe487;
+  --disable-color: hsl(0, 0%, 95%);
   --main-border-color: hsl(0, 0%, 40%);
   --ship-sunk-color: hsl(0, 0%, 60%);
 }
@@ -79,6 +85,8 @@ body {
   --miss-color: #f18585;
   --secondary-color: #9dc999;
   --changePos-color: #c99999;
+  --eligible-color: #ebe487;
+  --disable-color: hsl(0, 0%, 95%);
   --main-border-color: hsl(0, 0%, 40%);
   --ship-sunk-color: hsl(0, 0%, 60%);
 }
@@ -106,6 +114,9 @@ body {
 }
 .main .board-container .game-elements p {
   color: hsl(0deg, 0%, 10%);
+}
+.main .board-container .game-elements table {
+  position: relative;
 }
 
 .column-1 {
@@ -277,6 +288,9 @@ body {
   position: absolute;
   top: 7px;
   left: 9px;
+}
+.board-element div.eligible {
+  background: var(--eligible-color);
 }
 
 .board-container {
@@ -561,4 +575,15 @@ body {
   .ships-container * {
     display: none;
   }
+}
+table.disabled {
+  pointer-events: none;
+}
+table.disabled::before {
+  content: "";
+  position: absolute;
+  background: rgba(241, 241, 241, 0.5);
+  width: 105%;
+  height: 105%;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

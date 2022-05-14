@@ -22,6 +22,10 @@ class Ship {
         
     }
 
+    setOrietation = (orientation) => {
+        this.orientation = orientation;
+    }
+
     changeOrientation = () => {
         return this.orientation === 'vertical' ? this.orientation = 'horizontal' : this.orientation = 'vertical';
     }
@@ -55,18 +59,21 @@ class Ship {
         if (this.orientation === 'vertical') {
             result.push({x: head.x - 1, y: head.y}, {x: head.x + 1, y: head.y}, {x: head.x, y: head.y - 1}, {x: head.x - 1, y: head.y - 1}, {x: head.x + 1, y: head.y - 1});
             body.forEach(point => result.push({x: point.x + 1, y: point.y}, {x: point.x - 1, y: point.y}));
-            result.push({x: tail.x + 1, y: tail.y}, {x: tail.x, y: tail.y - 1}, {x: tail.x - 1, y: tail.y}, {x: tail.x - 1, y: tail.y + 1}, {x: tail.x + 1, y: tail.y + 1});
+            result.push({x: tail.x + 1, y: tail.y}, {x: tail.x, y: tail.y + 1}, {x: tail.x - 1, y: tail.y}, {x: tail.x - 1, y: tail.y + 1}, {x: tail.x + 1, y: tail.y + 1});
         } else {
             result.push({x: head.x - 1, y: head.y}, {x: head.x , y: head.y - 1}, {x: head.x, y: head.y + 1}, {x: head.x - 1, y: head.y - 1}, {x: head.x - 1, y: head.y + 1});
             body.forEach(point => result.push({x: point.x, y: point.y - 1}, {x: point.x, y: point.y + 1}));
             result.push({x: tail.x + 1, y: tail.y}, {x: tail.x, y: tail.y - 1}, {x: tail.x, y: tail.y + 1}, {x: tail.x + 1, y: tail.y - 1}, {x: tail.x + 1, y: tail.y + 1});
         }
-        
-        return this.adjacentCoords = result;
+        const filteredAdj = result.filter(point => point.x <= 9 && point.y <= 9 && point.x >= 0 && point.y >= 0 )
+        return this.adjacentCoords = filteredAdj;
     }
 
-    
-
+    randomOrientation() {
+        const integer = Math.round(Math.random()); 
+        return integer < 1 ? this.orientation = 'horizontal' : this.orientation = 'vertical';
+    }
+      
 }
 
 export default Ship;

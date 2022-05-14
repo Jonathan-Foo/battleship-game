@@ -1,32 +1,36 @@
 import Gameboard from "./Gameboard"
 
-const Player = (name) => {
-    const gameBoard = Gameboard();
-    //Placing ships randomly
-    gameBoard.placeShips();
+class Player{ 
+    constructor(name) {
+        this.name = name;
+        this.gameBoard = new Gameboard();
+    }
+
+    placeShipsRandomly() {
+        this.gameBoard.placeShips();
+    }
+    // 
 
     //Function for players to initiate and attack on opponent
-    const attack = (opponent) => {
-        const attackCoord = createRandomCoord()
-        if (opponent.gameBoard.gameboardArr[attackCoord.x][attackCoord.y] !== 'M' || opponent.gameBoard.gameboardArr[attackCoord.x][attackCoord.y] !== 'X' ) {
+    attack(opponent) {
+        const attackCoord = this.createRandomCoord();
+        if (opponent.gameBoard.gameboardArr[attackCoord.y][attackCoord.x] !== 'M' || opponent.gameBoard.gameboardArr[attackCoord.y][attackCoord.x] !== 'X' ) {
             opponent.gameBoard.receiveAttack(attackCoord);
         }  else {
-            attack();
+            this.attack(opponent);
         }
     }
 
-    const createRandomCoord = () => {
-        function randomInt(max) {
-            return Math.floor(Math.random() * (max + 1));
+    createRandomCoord() {
+        function randomInt() {
+            return Math.floor(Math.random() * 10);
         }
-        const x = randomInt(10);
-        const y = randomInt(10); 
+        const x = randomInt();
+        const y = randomInt();
+
         return {x, y};
     } 
 
-
-
-    return { name, attack, gameBoard }
 }
 
 export default Player;

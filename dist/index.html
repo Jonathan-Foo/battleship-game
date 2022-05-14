@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battleship</title>
     <link rel="stylesheet" href="scss/style.css" />
-    <script src="../src/components/Gameboard.js" type="module"></script>
+    <script src="main.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,127 +59,327 @@
               <div class="ship-part"></div>
             </div>
           </div>
-          <table class="gameboard-wrapper">
+          <table class="gameboard-wrapper" id="player-table">
             <tbody class="gameboard">
               <tr class="board row-1">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 0}" class=" "></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 0}" class=""></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 0}" class=""></div>
+                </td>
               </tr>
               <tr class="board row-2">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 1}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 1}"></div>
+                </td>
               </tr>
               <tr class="board row-3">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 2}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 2}"></div>
+                </td>
               </tr>
               <tr class="board row-4">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 3}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 3}"></div>
+                </td>
               </tr>
               <tr class="board row-5">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 4}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 4}"></div>
+                </td>
               </tr>
               <tr class="board row-6">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 5}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 5}"></div>
+                </td>
               </tr>
               <tr class="board row-7">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 6}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 6}"></div>
+                </td>
               </tr>
               <tr class="board row-8">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 7}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 7}"></div>
+                </td>
               </tr>
               <tr class="board row-9">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element player">
+                  <div data-coords="{x: 0, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 1, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 2, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 3, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 4, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 5, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 6, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 7, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 8, y: 8}"></div>
+                </td>
+                <td class="board-element player">
+                  <div data-coords="{x: 9, y: 8}"></div>
+                </td>
               </tr>
               <tr class="board row-10">
-                <td class="board-element column-1"><div></div></td>
-                <td class="board-element column-2"><div></div></td>
-                <td class="board-element column-3"><div></div></td>
-                <td class="board-element column-4"><div></div></td>
-                <td class="board-element column-5"><div></div></td>
-                <td class="board-element column-6"><div></div></td>
-                <td class="board-element column-7"><div></div></td>
-                <td class="board-element column-8"><div></div></td>
-                <td class="board-element column-9"><div></div></td>
-                <td class="board-element column-10"><div></div></td>
+                <td class="board-element column-1 player">
+                  <div data-coords="{x: 0, y: 9}"></div>
+                </td>
+                <td class="board-element column-2 player">
+                  <div data-coords="{x: 1, y: 9}"></div>
+                </td>
+                <td class="board-element column-3 player">
+                  <div data-coords="{x: 2, y: 9}"></div>
+                </td>
+                <td class="board-element column-4 player">
+                  <div data-coords="{x: 3, y: 9}"></div>
+                </td>
+                <td class="board-element column-5 player">
+                  <div data-coords="{x: 4, y: 9}"></div>
+                </td>
+                <td class="board-element column-6 player">
+                  <div data-coords="{x: 5, y: 9}"></div>
+                </td>
+                <td class="board-element column-7 player">
+                  <div data-coords="{x: 6, y: 9}"></div>
+                </td>
+                <td class="board-element column-8 player">
+                  <div data-coords="{x: 7, y: 9}"></div>
+                </td>
+                <td class="board-element column-9 player">
+                  <div data-coords="{x: 8, y: 9}"></div>
+                </td>
+                <td class="board-element column-10 player">
+                  <div data-coords="{x: 9, y: 9}"></div>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -190,127 +390,327 @@
       <!-- COMPUTER'S BOARD -->
       <div class="board-container computer-board">
         <div class="game-elements">
-          <table class="gameboard-wrapper">
+          <table class="gameboard-wrapper disabled">
             <tbody class="gameboard">
               <tr class="board row-1">
-                <td class="board-element"><div class="miss"></div></td>
-                <td class="board-element"><div class="hit"></div></td>
-                <td class="board-element"><div class="occupied"></div></td>
-                <td class="board-element"><div class="changing"></div></td>
-                <td class="board-element"><div class="changing head"></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 0}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 0}"></div>
+                </td>
               </tr>
               <tr class="board row-2">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 1}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 1}"></div>
+                </td>
               </tr>
               <tr class="board row-3">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 2}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 2}"></div>
+                </td>
               </tr>
               <tr class="board row-4">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 3}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 3}"></div>
+                </td>
               </tr>
               <tr class="board row-5">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 4}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 4}"></div>
+                </td>
               </tr>
               <tr class="board row-6">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 5}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 5}"></div>
+                </td>
               </tr>
-              <tr class="board row-7">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+              <tr class="board row-7 computer">
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 6}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 6}"></div>
+                </td>
               </tr>
               <tr class="board row-8">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 7}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 7}"></div>
+                </td>
               </tr>
               <tr class="board row-9">
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
-                <td class="board-element"><div></div></td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 0, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 1, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 2, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 3, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 4, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 5, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 6, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 7, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 8, y: 8}"></div>
+                </td>
+                <td class="board-element computer">
+                  <div data-coords="{x: 9, y: 8}"></div>
+                </td>
               </tr>
               <tr class="board row-10">
-                <td class="board-element column-1"><div></div></td>
-                <td class="board-element column-2"><div></div></td>
-                <td class="board-element column-3"><div></div></td>
-                <td class="board-element column-4"><div></div></td>
-                <td class="board-element column-5"><div></div></td>
-                <td class="board-element column-6"><div></div></td>
-                <td class="board-element column-7"><div></div></td>
-                <td class="board-element column-8"><div></div></td>
-                <td class="board-element column-9"><div></div></td>
-                <td class="board-element column-10"><div></div></td>
+                <td class="board-element column-1 computer">
+                  <div data-coords="{x: 0, y: 9}"></div>
+                </td>
+                <td class="board-element column-2 computer">
+                  <div data-coords="{x: 1, y: 9}"></div>
+                </td>
+                <td class="board-element column-3 computer">
+                  <div data-coords="{x: 2, y: 9}"></div>
+                </td>
+                <td class="board-element column-4 computer">
+                  <div data-coords="{x: 3, y: 9}"></div>
+                </td>
+                <td class="board-element column-5 computer">
+                  <div data-coords="{x: 4, y: 9}"></div>
+                </td>
+                <td class="board-element column-6 computer">
+                  <div data-coords="{x: 5, y: 9}"></div>
+                </td>
+                <td class="board-element column-7 computer">
+                  <div data-coords="{x: 6, y: 9}"></div>
+                </td>
+                <td class="board-element column-8 computer">
+                  <div data-coords="{x: 7, y: 9}"></div>
+                </td>
+                <td class="board-element column-9 computer">
+                  <div data-coords="{x: 8, y: 9}"></div>
+                </td>
+                <td class="board-element column-10 computer">
+                  <div data-coords="{x: 9, y: 9}"></div>
+                </td>
               </tr>
             </tbody>
           </table>

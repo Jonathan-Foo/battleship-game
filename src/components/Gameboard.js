@@ -15,10 +15,10 @@ class Gameboard {
 
         this.shipsArr = [new Ship(5, 'A'), new Ship(4, 'B'), new Ship(3, 'C'), new Ship(3, 'D'), new Ship(2, 'E')];
 
-        this.canBePlace = this.canBePlace.bind(this);
-        this.placeShipsRandomly = this.placeShipsRandomly.bind(this)
+        
     }
 
+    // ATTACK FUNCTION - PASSED TEST
     receiveAttack = (coord) => {
         if (this.gameboardArr[coord.y][coord.x] === 'M' || this.gameboardArr[coord.y][coord.x] === 'X') {
             return;
@@ -32,8 +32,7 @@ class Gameboard {
 
     // Attack function - how gameboard responds when a players clicks a square
     sunken(ship) {
-        const adjCoords = ship.adjacentCoords;
-        adjCoords.forEach(coord => this.gameboardArr[coord.y][coord.x] = 'M')
+        ship.adjacentCoords.forEach(coord => this.gameboardArr[coord.y][coord.x] = 'M')
     }
 
     successfulHit(obj) {
@@ -44,7 +43,7 @@ class Gameboard {
         if (!targetShip.isSunk()) {
             return
         } else {
-            sunken(targetShip);
+            this.sunken(targetShip);
         }
     } 
     
@@ -52,11 +51,11 @@ class Gameboard {
         return this.shipsArr.every(ship => ship.isSunk()); 
     }
 
-    // PLACING SHIPS RANDOMLY 
-    // Function that generates an obj containing random x and y coordinates
+    // PLACING SHIPS RANDOMLY - PASSED 
     randomCoords(length, orientation) { 
         let x = randomInt();
         let y = randomInt();
+        
         function randomInt() {
             return Math.floor(Math.random() * 10);
         }
@@ -71,33 +70,38 @@ class Gameboard {
     }
 
     placeShipsRandomly = (ship) => { 
+        // Orienation needs to set before headCoord
+        ship.randomOrientation(); 
         const length = ship.length
         const orientation = ship.orientation
         ship.setHeadCoord(this.randomCoords(length, orientation))
-        const filteredAdj = ship.adjacentCoords.filter(point => point.x <= 9 && point.y <= 9 && point.x >= 0 && point.y >= 0 )
-    
-        // const boundCanBePlace = .bind(this)
+       
         if (this.canBePlace(ship)) {
-            ship.shipBodyCoords.forEach( point => this.gameboardArr[point.y][point.x] = ship.character)
-            filteredAdj.forEach( point => {this.gameboardArr[point.y][point.x] = 'O'}) 
+            this.insertCharactersToGBArr(ship);
         } else {
-            return this.placeShipsRandomly(ship)
+            return this.placeShipsRandomly(ship);
         }
    
     }    
 
-    //Checks whether a ship can be placed at that point
+    insertCharactersToGBArr = (ship) => {
+        ship.shipBodyCoords.forEach( point => this.gameboardArr[point.y][point.x] = ship.character);
+        ship.adjacentCoords.forEach( point => {this.gameboardArr[point.y][point.x] = 'O'});
+    }
+
     canBePlace = (ship) => {
         return ship.shipBodyCoords.every(point => this.gameboardArr[point.y][point.x] === ''); 	
         // return this.gameboardArr;
     }
 
-
-    // Function to initiate placing ships randomly
     placeShips = () => {
+        if (!this.gameboardArr.every(array => array.every(point =>  point === ''))) return; 
         this.shipsArr.forEach(ship => this.placeShipsRandomly(ship));
-
+        
+    
     }
+
+    
 
 }
 
