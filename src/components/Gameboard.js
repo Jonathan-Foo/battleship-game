@@ -47,6 +47,21 @@ class Gameboard {
         }
     } 
     
+
+    targetedShip = (coords) => {
+        const targetSymbol = this.gameboardArr[coords.y][coords.x];
+        const targetShip = this.shipsArr.find(ship => ship.character === targetSymbol);
+
+        return targetShip;
+    } 
+
+    notTargetedShips = (coords) => {
+        const targetSymbol = this.gameboardArr[coords.y][coords.x];
+        return this.shipsArr.filter(ship => ship.character !== targetSymbol);
+    }
+
+
+    
     allShipSunkCheck = () => {
         return this.shipsArr.every(ship => ship.isSunk()); 
     }
@@ -90,8 +105,12 @@ class Gameboard {
     }
 
     canBePlace = (ship) => {
-        return ship.shipBodyCoords.every(point => this.gameboardArr[point.y][point.x] === ''); 	
-        // return this.gameboardArr;
+        if (ship.shipBodyCoords.some(point => point.x > 9 || point.y > 9)) {
+            return false 
+        } else {
+            return ship.shipBodyCoords.every(point => this.gameboardArr[point.y][point.x] === ''); 	
+        }
+        
     }
 
     placeShips = () => {

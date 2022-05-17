@@ -1,10 +1,11 @@
 import Player from "./Player"
-import { displayGameBoard } from "./DOM Interaction/Render"
+import { displayGameBoard, changeMode } from "./DOM Interaction/ShipPlacement"
 
 export default function Game() {
     const player1 = new Player('player')
     player1.placeShipsRandomly();
-    displayGameBoard(player1.gameBoard.gameboardArr);
+    displayGameBoard(player1.gameBoard);
+    changeMode.add(player1.gameBoard);
 
     const player2 = new Player('computer')
     player2.placeShipsRandomly();

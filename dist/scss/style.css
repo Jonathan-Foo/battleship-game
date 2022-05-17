@@ -279,9 +279,6 @@ body {
 .board-element div.changing {
   background: var(--changePos-color);
 }
-.board-element div.changing.head {
-  background: var(--changePos-color);
-}
 .board-element div.changing.head::before {
   content: "⟲";
   color: hsl(0deg, 0%, 15%);

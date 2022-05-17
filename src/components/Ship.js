@@ -36,15 +36,16 @@ class Ship {
         let i = 0;
         if (this.orientation === 'horizontal') {
             while (i < this.length) {
-                result.push({x: this.headCoord.x + i, y: this.headCoord.y});
+                result.push({x: Number(this.headCoord.x) + i, y: Number(this.headCoord.y)});
                 i++;
             }
         } else {
             while (i < this.length) {
-                result.push({x: this.headCoord.x , y: this.headCoord.y + i});
+                result.push({x: Number(this.headCoord.x) , y: Number(this.headCoord.y) + i});
                 i++;
             }
         }
+    
         return this.shipBodyCoords = result;
     }
     
