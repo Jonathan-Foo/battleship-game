@@ -1,4 +1,0 @@
-import Game from "./components/Game";
-
-Game();
-
