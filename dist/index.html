@@ -21,9 +21,9 @@
   <body>
     <div class="top">
       <div class="instruction">
-        <p>Player's Turn</p>
+        <p>Move Ships</p>
       </div>
-      <button type="button" class="start-btn">Start Game</button>
+      <button type="button" class="start-btn" id="start-btn" >Start Game</button>
     </div>
 
     <div class="main">
@@ -31,27 +31,27 @@
       <div class="board-container player-board">
         <div class="game-elements">
           <div class="ships-container">
-            <div class="ship-wrapper">
+            <div class="ship-wrapper player">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
-              <div class="ship-part"></div>
-              <div class="ship-part"></div>
-              <div class="ship-part"></div>
-            </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper player">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper player">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper player">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper player">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
@@ -390,7 +390,7 @@
       <!-- COMPUTER'S BOARD -->
       <div class="board-container computer-board">
         <div class="game-elements">
-          <table class="gameboard-wrapper disabled">
+          <table class="gameboard-wrapper disabled" id="computer-table">
             <tbody class="gameboard">
               <tr class="board row-1">
                 <td class="board-element computer">
@@ -557,34 +557,34 @@
                   <div data-x="0" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="1" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="2" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="3" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="4" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="5" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="6" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="7" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="8" data-y="5"></div>
                 </td>
                 <td class="board-element computer">
-                  <div data-x="0" data-y="5"></div>
+                  <div data-x="9" data-y="5"></div>
                 </td>
               </tr>
-              <tr class="board row-7 computer">
+              <tr class="board row-7">
                 <td class="board-element computer">
                   <div data-x="0" data-y="6"></div>
                 </td>
@@ -716,27 +716,27 @@
           </table>
           <p class="owner">Computer's Board</p>
           <div class="ships-container">
-            <div class="ship-wrapper">
-              <div class="ship-part sunk"></div>
-              <div class="ship-part sunk"></div>
-            </div>
-            <div class="ship-wrapper">
-              <div class="ship-part"></div>
+            <div class="ship-wrapper computer ">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper computer">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper computer">
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+              <div class="ship-part"></div>
+            </div>
+            <div class="ship-wrapper computer">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>
             </div>
-            <div class="ship-wrapper">
+            <div class="ship-wrapper computer">
               <div class="ship-part"></div>
               <div class="ship-part"></div>
               <div class="ship-part"></div>

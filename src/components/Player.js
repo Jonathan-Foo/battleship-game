@@ -12,13 +12,19 @@ class Player{
     // 
 
     //Function for players to initiate and attack on opponent
-    attack(opponent) {
+    randomAttack(opponent) {
         const attackCoord = this.createRandomCoord();
         if (opponent.gameBoard.gameboardArr[attackCoord.y][attackCoord.x] !== 'M' || opponent.gameBoard.gameboardArr[attackCoord.y][attackCoord.x] !== 'X' ) {
             opponent.gameBoard.receiveAttack(attackCoord);
         }  else {
             this.attack(opponent);
         }
+    }
+
+    targettedAttack(coord, opponent) {
+        const attackCoord = coord
+        opponent.gameBoard.receiveAttack(attackCoord);
+
     }
 
     createRandomCoord() {

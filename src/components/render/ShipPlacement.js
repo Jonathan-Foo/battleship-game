@@ -1,5 +1,3 @@
-
-
 // Display the ships on Player's Gameboard
 const shipSquaresArr = (gameBoard) => {
     const gameBoardArr = gameBoard.gameboardArr
@@ -211,4 +209,4 @@ const changeMode = {
 }
 
 
-export { displayGameBoard, changeMode };
+export { displayGameBoard, changeMode, shipSquaresArr };

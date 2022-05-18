@@ -161,18 +161,18 @@ $letters: (1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I
 
 table.disabled {
     pointer-events: none;
-    
+    position: relative;
+    display: inline-block;
 
     &::before {
+        
         content: '';
         position: absolute;
         background: rgba($color: rgb(241, 241, 241), $alpha: 0.5);
-        width: 105%;
-        height: 105%;
+        
+        width: 100%;
+        height: 100%;
         z-index: 2;
     }
 }
 
-// .player > [data-x="1"][data-y="0"] {
-//     background-color: red;
-// }

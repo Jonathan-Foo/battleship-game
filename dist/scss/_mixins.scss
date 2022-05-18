@@ -26,10 +26,12 @@
                 
             }
 
-            .ship-part.sunk{
+        }
+
+        .ship-wrapper.sunk {
+            .ship-part {
                 background: var(--ship-sunk-color);
             }
-        
         }
     
     }    

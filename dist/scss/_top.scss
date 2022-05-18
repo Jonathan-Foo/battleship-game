@@ -12,6 +12,7 @@
     .instruction{
         @include flexCenter;
         font-size: 35px;
+        width: 280px;
         border: 1px solid var(--main-border-color);
         border-radius: 5px;
         padding: .5em 3em .5em 3em;

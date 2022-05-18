@@ -13,8 +13,8 @@ class Gameboard {
                             ['', '', '', '', '', '', '', '', '', ''],
                             ['', '', '', '', '', '', '', '', '', ''],]
 
-        this.shipsArr = [new Ship(5, 'A'), new Ship(4, 'B'), new Ship(3, 'C'), new Ship(3, 'D'), new Ship(2, 'E')];
-
+        // this.shipsArr = [new Ship(5, 'A'), new Ship(4, 'B'), new Ship(3, 'C'), new Ship(3, 'D'), new Ship(2, 'E')];
+        this.shipsArr = [new Ship(2, 'E'), new Ship(3, 'D'), new Ship(3, 'C'), new Ship(4, 'B'),  new Ship(5, 'A')];
         
     }
 
